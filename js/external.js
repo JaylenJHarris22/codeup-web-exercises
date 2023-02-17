@@ -29,7 +29,7 @@ if(!scheduleFree){
     console.log('You can\'t attend this class');
 }else{
     conflictingClass = confirm('Do you have a class from 11:15 am to 1:45pm?')
-    if (scheduleFree && !conflictingClass){
+    if (!scheduleFree && conflictingClass){
         console.log('You can enroll');
     }else{
         console.log('You cannnot attend this class');
@@ -48,6 +48,8 @@ if(!premMember) {
             console.log('You get the discount.');
         }
     }
+}else{
+    console.log('You get a discount');
 }
 
 
