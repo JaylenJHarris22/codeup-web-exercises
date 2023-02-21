@@ -28,40 +28,83 @@
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-//var randomColor = colors[Math.floor(Math.random() * colors.length)];
-let randomColor = 'purple'
-function analyzeColor (){
-    if (randomColor == 'red'){
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//let input = (prompt('What is your color of choice?')).toLowerCase()
+let input = 'red'
+function analyzeColor (input){
+    if (input === 'red'){
         return 'Red is the color of an apple.'
-    }else if (randomColor == 'orange'){
+    }else if (input === 'orange'){
         return 'Orange is the color of a traffic cone.'
-    }else if (randomColor == 'yellow'){
+    }else if (input === 'yellow'){
         return 'Yellow is the color of a duckie.'
-    }else if (randomColor == 'green'){
+    }else if (input === 'green'){
         return 'Green is the color of a cactus.'
-    }else if (randomColor == 'blue'){
+    }else if (input === 'blue'){
         return 'Blue is the color of the ocean.'
-    }else if (randomColor == 'indigo'){
+    }else if (input === 'indigo'){
         return 'Indigo is the color of a butterfly.'
-    }else if (randomColor == 'violet'){
+    }else if (input === 'violet'){
         return 'Violet is the color of lavender.'
+    }else if (input === 'pink'){
+        return 'Pink is the best color and the color of a piggy'
     }else {
-        return `I don't know ${randomColor}`
+        return `I don't know ${input}`
     }
 }
 
-console.log(analyzeColor())
+console.log(analyzeColor(input))
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+// function analyzeColor (randomColor){
+//     if (randomColor === 'red'){
+//         return 'Red is the color of an apple.'
+//     }else if (randomColor === 'orange'){
+//         return 'Orange is the color of a traffic cone.'
+//     }else if (randomColor === 'yellow'){
+//         return 'Yellow is the color of a duckie.'
+//     }else if (randomColor === 'green'){
+//         return 'Green is the color of a cactus.'
+//     }else if (randomColor === 'blue'){
+//         return 'Blue is the color of the ocean.'
+//     }else if (randomColor === 'indigo'){
+//         return 'Indigo is the color of a butterfly.'
+//     }else if (randomColor === 'violet'){
+//         return 'Violet is the color of lavender.'
+//     }
+// }
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
+switch (randomColor){
+    case 'red':
+        console.log('Red is the color of an apple.')
+        break;
+    case 'orange':
+        console.log('Orange is the color of a traffic cone.')
+        break;
+    case 'yellow':
+        console.log('Yellow is the color of a duckie.')
+        break;
+    case 'green':
+        console.log('Green is the color of a cactus.')
+        break;
+    case 'blue':
+        console.log('Blue is the color of the ocean.')
+        break;
+    case 'indigo':
+        console.log('Indigo is the color of a butterfly.')
+        break;
+    case 'violet':
+        console.log('Violet is the color of lavender.')
+        break;
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -69,7 +112,27 @@ console.log(analyzeColor())
  * function to show it to the user.
  */
 
-/* ########################################################################## */
+function analyzeColor (input){
+    if (input === 'red'){
+        return 'Red is the color of an apple.'
+    }else if (input === 'orange'){
+        return 'Orange is the color of a traffic cone.'
+    }else if (input === 'yellow'){
+        return 'Yellow is the color of a duckie.'
+    }else if (input === 'green'){
+        return 'Green is the color of a cactus.'
+    }else if (input === 'blue'){
+        return 'Blue is the color of the ocean.'
+    }else if (input === 'indigo'){
+        return 'Indigo is the color of a butterfly.'
+    }else if (input === 'violet'){
+        return 'Violet is the color of lavender.'
+    }else if (input === 'pink'){
+        return 'Pink is the best color and the color of a piggy'
+    }else {
+        return `I don't know ${input}`
+    }
+}
 
 /**
  * TODO:
@@ -91,6 +154,32 @@ console.log(analyzeColor())
  * return value.
  */
 
+// let luckyNumber = Math.floor(Math.random() * 6)
+    //let luckyNumber = 1
+// let totalAmount = 100
+let total;
+// function calculateTotal (luckyNumber, totalAmount){
+//     if (luckyNumber === 0){
+//         total = totalAmount
+//         return total
+//     }else if (luckyNumber === 1){
+//         total = totalAmount * .9
+//         return total
+//     }else if (luckyNumber === 2){
+//         total = totalAmount * .75
+//         return total
+//     }else if (luckyNumber === 3){
+//         total = totalAmount * .65
+//         return total
+//     }else if (luckyNumber === 4){
+//         total = totalAmount * .5
+//         return total
+//     }else if (luckyNumber === 5){
+//         total = 0
+//         return total
+//     }
+// }
+// console.log(calculateTotal(luckyNumber, totalAmount))
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -100,7 +189,44 @@ console.log(analyzeColor())
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
+var luckyNumber = Math.floor(Math.random() * 6);
+let totalAmount = Number(prompt('What was your total today?'))
+
+function calculateTotal (luckyNumber, totalAmount){
+
+    alert(`
+            ${totalAmount} is the total before discount 
+            ${luckyNumber} was your lucky number
+          `)
+    if (luckyNumber === 0){
+        total = totalAmount
+        alert(`${total} was your total`)
+        return total
+    }else if (luckyNumber === 1){
+        total = totalAmount * .9
+        alert(`${total} was your total`)
+        return total
+    }else if (luckyNumber === 2){
+        total = totalAmount * .75
+        alert(`${total} was your total`)
+        return total
+    }else if (luckyNumber === 3){
+        total = totalAmount * .65
+        alert(`${total} was your total`)
+        return total
+    }else if (luckyNumber === 4){
+        total = totalAmount * .5
+        alert(`${total} was your total`)
+        return total
+    }else if (luckyNumber === 5){
+        total = 0
+        alert(`${total} was your total`)
+        return total
+    }
+
+}
+console.log(calculateTotal(luckyNumber, totalAmount))
 
 /**
  * TODO:
