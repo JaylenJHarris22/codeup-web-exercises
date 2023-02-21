@@ -190,43 +190,43 @@ let total;
  */
 // Generate a random number between 0 and 6
 
-var luckyNumber = Math.floor(Math.random() * 6);
-let totalAmount = Number(prompt('What was your total today?'))
-
-function calculateTotal (luckyNumber, totalAmount){
-
-    alert(`
-            ${totalAmount} is the total before discount 
-            ${luckyNumber} was your lucky number
-          `)
-    if (luckyNumber === 0){
-        total = totalAmount
-        alert(`${total} was your total`)
-        return total
-    }else if (luckyNumber === 1){
-        total = totalAmount * .9
-        alert(`${total} was your total`)
-        return total
-    }else if (luckyNumber === 2){
-        total = totalAmount * .75
-        alert(`${total} was your total`)
-        return total
-    }else if (luckyNumber === 3){
-        total = totalAmount * .65
-        alert(`${total} was your total`)
-        return total
-    }else if (luckyNumber === 4){
-        total = totalAmount * .5
-        alert(`${total} was your total`)
-        return total
-    }else if (luckyNumber === 5){
-        total = 0
-        alert(`${total} was your total`)
-        return total
-    }
-
-}
-console.log(calculateTotal(luckyNumber, totalAmount))
+// var luckyNumber = Math.floor(Math.random() * 6);
+// let totalAmount = Number(prompt('What was your total today?'))
+//
+// function calculateTotal (luckyNumber, totalAmount){
+//
+//     alert(`
+//             ${totalAmount} is the total before discount
+//             ${luckyNumber} was your lucky number
+//           `)
+//     if (luckyNumber === 0){
+//         total = totalAmount
+//         alert(`${total} was your total`)
+//         return total
+//     }else if (luckyNumber === 1){
+//         total = totalAmount * .9
+//         alert(`${total} was your total`)
+//         return total
+//     }else if (luckyNumber === 2){
+//         total = totalAmount * .75
+//         alert(`${total} was your total`)
+//         return total
+//     }else if (luckyNumber === 3){
+//         total = totalAmount * .65
+//         alert(`${total} was your total`)
+//         return total
+//     }else if (luckyNumber === 4){
+//         total = totalAmount * .5
+//         alert(`${total} was your total`)
+//         return total
+//     }else if (luckyNumber === 5){
+//         total = 0
+//         alert(`${total} was your total`)
+//         return total
+//     }
+//
+// }
+// console.log(calculateTotal(luckyNumber, totalAmount))
 
 /**
  * TODO:
@@ -246,3 +246,21 @@ console.log(calculateTotal(luckyNumber, totalAmount))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let numCheck = confirm('Would you like to enter a number?')
+if(numCheck){
+   var num = Number(prompt('Please enter a number.'))
+}
+
+if (num % 2 === 0){
+    alert('The number is even.')
+}else{
+    alert('The number is odd.')
+}
+
+alert(num + 100)
+
+if (num >= 0){
+    alert('The number is positive.')
+}else {
+    alert('The number is negative.')
+}
