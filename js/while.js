@@ -14,7 +14,7 @@ do{
         console.log(`You can't sell ${sold} cones you only have ${totalCones + sold} left`)
         totalCones+=sold
     }else if (totalCones === 0){
-        console.log('Yay you sold all the cones')
+        console.log(`Yay you sold all the cones`)
     }else {
         console.log(`You sold ${sold} cones`)
     }
