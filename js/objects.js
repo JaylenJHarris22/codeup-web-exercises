@@ -42,11 +42,24 @@ console.log(person.sayHello())
  * and console.log the relevant messages for each person
  */
 
-// var shoppers = [
-//     {name: 'Cameron', amount: 180},
-//     {name: 'Ryan', amount: 250},
-//     {name: 'George', amount: 320}
-// ];
+var shoppers = [
+    {name: 'Cameron', amount: 180},
+    {name: 'Ryan', amount: 250},
+    {name: 'George', amount: 320}
+];
+
+shoppers.forEach( shop => {
+    // console.log(shop.amount)
+    if (shop.amount >= 200){
+        let total = shop.amount * .88
+        console.log(`Hello ${shop.name} you qualified for our discount your total before was ${shop.amount} now it is ${total}`)
+    }else{
+        let total = shop.amount
+        console.log(`Hello ${shop.name} your total is ${total}`)
+    }
+
+})
+console.log()
 
 /** TODO:
  * Create an array of objects that represent books and store it in a
@@ -60,7 +73,13 @@ console.log(person.sayHello())
  * > console.log(books[0].author.firstName) // "Douglas"
  * > console.log(books[0].author.lastName) // "Adams"
  */
-
+let books = [
+    {title:'The Princess Trials', author: {firstName:'Cordelia', lastName:'Castel'}},
+    {title:'The Amnesia Experiment', author: {firstName:'Caroline', lastName:'Wei'}},
+    {title:'Uglies', author: {firstName:'Scott', lastName:'Westerfeld'}},
+    {title:'The Red Pyramid', author: {firstName:'Rick', lastName:'Riordan'}},
+    {title:'The Throne of Fire', author: {firstName:'Rick', lastName:'Riordan'}},
+];
 /**
  * TODO:
  * Loop through the books array and output the following information about
@@ -85,7 +104,14 @@ console.log(person.sayHello())
  *      ---
  *      ...
  */
-
+books.forEach( (value, index, array) =>{
+    console.log(
+`         Book # ${index + 1}
+         Title: ${value.title}
+         Author: ${value.author.firstName} ${value.author.lastName}
+         ---`
+    )
+})
 /**
  * Bonus:
  * - Create a function named `createBook` that accepts a title and author
