@@ -111,7 +111,7 @@ books.forEach( (value, index, array) =>{
          Author: ${value.author.firstName} ${value.author.lastName}
          ---`
     )
-})
+});
 /**
  * Bonus:
  * - Create a function named `createBook` that accepts a title and author
@@ -122,3 +122,24 @@ books.forEach( (value, index, array) =>{
  *   outputs the information described above. Refactor your loop to use your
  *   `showBookInfo` function.
  */
+
+// (function createBook (){
+//     let titleAdd = prompt('What is the title of book');
+//     let firstNameAdd = prompt('What is the author\'s first name?');
+//     let lastNameAdd = prompt('What is the author\'s last name');
+//     let book = {title: titleAdd, author: {firstName: firstNameAdd, lastName: lastNameAdd}}
+//     console.log(book)
+// })();
+
+// (function createBook (){
+//     let titleAdd = prompt('What is the title of book');
+//     let firstNameAdd = prompt('What is the author\'s first name?');
+//     let lastNameAdd = prompt('What is the author\'s last name');
+//     books.push({title: titleAdd, author: {firstName: firstNameAdd, lastName: lastNameAdd}})
+// })();
+
+(function showBookInfo (){
+    books.forEach( book =>{
+        console.log('Title: ' + book.title + ' Author: ' + book.author.firstName + ' ' + book.author.lastName)
+    })
+})()
