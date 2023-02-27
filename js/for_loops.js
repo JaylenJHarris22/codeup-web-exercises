@@ -10,7 +10,7 @@
 
 
 // for(let i = 0;i < 10;i++){
-//     let random = Math.floor((Math.random() * 180)+ 20)
+//     let random = Math.floor((Math.random() * 181)+ 20)
 //     if (random % 2 === 0){
 //         console.log(`${random} is even.`)
 //     }else{
