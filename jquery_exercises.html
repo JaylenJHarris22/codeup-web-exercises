@@ -19,18 +19,41 @@
     <li class="codeup">Social environment</li>
 </ul>
 
-<div>Reveal game name</div>
+<div id="gameName">Reveal game name</div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script type="text/javascript" language="JavaScript">
     // window.onload = function() {
     //     alert( 'The page has finished loading!' );
     // };
-    $(function(){
-        $('.codeup').css('border', '1px solid red');
-        $('li').css('font-size', '20px');
-        $('h1, p, li').css('background-color', 'aqua');
-    });
+    // $(function(){
+    //     $('.codeup').css('border', '1px solid red');
+    //     $('li').css('font-size', '20px');
+    //     //$('h1, p, li').css('background-color', 'aqua');
+    //     $('#paragraph').click( () => {
+    //         alert('WEEEEWOOOOOO it\'s a wild fire truck.')
+    //     });
+    //     $('#gameName').dblclick( () => {
+    //         $('#gameName').replaceWith('Pokemon SoulSilver')
+    //     });
+    //     $('.codeup:nth-child(3)').hover( () => {
+    //         $(this).css('color', 'red')
+    //         alert('Ahh that\'s better.')
+    //     })
+    // });
+    $('#header').click( function (){
+        $(this).css('background-color', 'red');
+    })
+    $('#paragraph').dblclick( function (){
+        $(this).css('font-size', '18px')
+    })
+    $('li').hover(
+        function (){
+            $(this).css('color', 'red')
+        },
+        function (){
+            $(this).css('color', 'black')
+        })
 </script>
 </body>
 </html>
