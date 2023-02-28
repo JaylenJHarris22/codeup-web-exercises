@@ -24,6 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="btn1">Change Main Header</button>
+<button id="btn2">The Color for List</button>
+<button id="btn3">The Size for the List</button>
+<button id="btn4">Change the Paragraph</button>
 
 <script>
     (function() {
@@ -54,6 +58,32 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = 'Mission Accomplished!'
     })();
+
+    //li targeter
+    let lItems = document.getElementsByTagName('li');
+
+    let btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', () => {
+        let mHeader = document.getElementById('main-header');
+        mHeader.innerHTML = 'Mighty Morphing';
+    });
+    let btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', () => {
+        for (let i = 0; i < lItems.length; i++){
+            lItems[i].style.color = 'pink'
+        }
+    });
+    let btn3 = document.getElementById('btn3');
+    btn3.addEventListener('click', () => {
+        for (let i = 0; i < lItems.length; i++){
+            lItems[i].style.fontSize = '24px'
+        }
+    })
+    let btn4 = document.getElementById('btn4');
+    btn4.addEventListener('click', () => {
+        let para = document.getElementsByClassName('sub-paragraph')
+        para[0].innerHTML = 'Let\s make today a good day!'
+    })
 </script>
 </body>
 </html>
