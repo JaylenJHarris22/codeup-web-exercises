@@ -8,19 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-<h1>This is a Header one</h1>
+<h1 id="header" class="codeup">The Reasons to Game</h1>
+<p id="paragraph">
+    Gaming is one of the greatest things in the world if done in moderation. It is a good stress relief and an excellent way to exercise your brain.
+</p>
 <ul>
-    <li>pop</li>
-    <li>rocks</li>
-    <li>COOL</li>
+    <li class="codeup">Fun</li>
+    <li>Challenging</li>
+    <li class="codeup">Pain relief</li>
+    <li class="codeup">Social environment</li>
 </ul>
 
+<div>Reveal game name</div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    window.onload = function() {
-        alert( 'The page has finished loading!' );
-    }
+<script type="text/javascript" language="JavaScript">
+    // window.onload = function() {
+    //     alert( 'The page has finished loading!' );
+    // };
+    $(function(){
+        $('.codeup').css('border', '1px solid red');
+        $('li').css('font-size', '20px');
+        $('h1, p, li').css('background-color', 'aqua');
+    });
 </script>
 </body>
 </html>
