@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">This is a Header</h1>
+
+    <p id="backgroundColorChange">Double click me to change the color for the page.</p>
+    <p id="chainCSS">I will get bigger and turn blue when you hover over me!</p>
+
+    <div>Top 5 things I like
+        <ul>
+            <li>Cars</li>
+            <li>Music</li>
+            <li>Games</li>
+            <li>Technology</li>
+            <li>Science</li>
+        </ul>
+    </div>
+
+    <button id="btn1">Change List</button>
+    <button id="btn2">Reveal Answer</button>
+
+    <dl>
+        <dt>1. How many areas are protected?</dt>
+        <dd>There is about 424 areas protected that span about 85 million acres.</dd>
+
+        <dt>2. What is the largest park site?</dt>
+        <dd>Wrangell-St. Elias National Park and Preserve at 13.2 million acres.</dd>
+
+        <dt>3. What is the smallest park site?</dt>
+        <dd>Thaddeus Kosciuszko National Memorial at .02 acres.</dd>
+
+        <dt>4. Can I bring a service animal?</dt>
+        <dd>Yes service animals are permitted.</dd>
+
+        <dt>5. How many people visit parks each year?</dt>
+        <dd>There are about 327 million visits a year.</dd>
+
+        <dt>6. Can I reserve a camping trip?</dt>
+        <dd>Most parks are on a first come first serve basis however for the more busy camps you should try and reserve your trip several months ahead if possible.</dd>
+
+        <dt>7. Can I bring alcohol?</dt>
+        <dd>Alcohol is not permitted in any public spaces</dd>
+
+        <dt>8. Can I ride a bike in the parks</dt>
+        <dd>Yes, most parks offer road or mountain biking or both.</dd>
+
+        <dt>9. Can you carry a gun in the parks?</dt>
+        <dd>Yes those of you who are over the age of 21 can carry your handguns.</dd>
+
+        <dt>10. Can you hike at the parks?</dt>
+        <dd>Yes you can hike at most of the parks.</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript">
+        "use strict";
+        $('#header').click( function (){
+            $(this).html('I have changed')
+        });
+
+
+        $('#backgroundColorChange').dblclick( function (){
+            $('body').css('background-color', 'pink')
+        })
+
+
+        $('#chainCSS').hover( 
+            function (){
+                $(this).css({
+                'font-size' : '42px',
+                'color' : 'aqua'
+        })
+        }, function (){
+            $(this).css({
+            'font-size' : '16px',
+            'color' : 'black'
+        })
+        }
+        );
+
+        let listStyles = {
+            'color' : 'orange',
+            'background-color' : 'black',
+            'list-style-type' : 'none',
+        }
+
+        $('#btn1').click( function () {
+            $('li').addClass('cool')
+            $('.cool').css(listStyles)
+            $('.cool').toggleClass('big')
+        })
+
+        $('#btn2').click( function (){
+            $('dd').toggleClass('invisible')
+        })
+
+    </script>
+</body>
+</html>
