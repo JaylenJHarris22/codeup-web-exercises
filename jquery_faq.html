@@ -12,7 +12,8 @@
     </style>
 </head>
 <body>
-    <h1 id="header">This is a Header</h1>
+    <!-- <h1 id="header">This is a Header</h1>
+    
 
     <p id="backgroundColorChange">Double click me to change the color for the page.</p>
     <p id="chainCSS">I will get bigger and turn blue when you hover over me!</p>
@@ -60,50 +61,74 @@
 
         <dt>10. Can you hike at the parks?</dt>
         <dd>Yes you can hike at most of the parks.</dd>
-    </dl>
+    </dl> -->
+
+    <ul>
+        <li>Linux</li>
+        <li>Apache</li>
+        <li>MySQL</li>
+        <li>PHP</li>
+        <li>Javascript</li>
+    </ul>
+    
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" language="javascript">
         "use strict";
-        $('#header').click( function (){
-            $(this).html('I have changed')
-        });
+        // $('#header').click( function (){
+        //     $(this).html('I have changed')
+        // });
 
 
-        $('#backgroundColorChange').dblclick( function (){
-            $('body').css('background-color', 'pink')
-        })
+        // $('#backgroundColorChange').dblclick( function (){
+        //     $('body').css('background-color', 'pink')
+        // })
 
 
-        $('#chainCSS').hover( 
-            function (){
+        // $('#chainCSS').hover( 
+        //     function (){
+        //         $(this).css({
+        //         'font-size' : '42px',
+        //         'color' : 'aqua'
+        // })
+        // }, function (){
+        //     $(this).css({
+        //     'font-size' : '16px',
+        //     'color' : 'black'
+        // })
+        // }
+        // );
+
+        // let listStyles = {
+        //     'color' : 'orange',
+        //     'background-color' : 'black',
+        //     'list-style-type' : 'none',
+        // }
+
+        // $('#btn1').click( function () {
+        //     $('li').addClass('cool')
+        //     $('.cool').css(listStyles)
+        //     $('.cool').toggleClass('big')
+        // })
+
+        // $('#btn2').click( function (){
+        //     $('dd').toggleClass('invisible')
+        // })
+
+        $('li').each( function (index){
+            if(index % 2 !== 0){
                 $(this).css({
-                'font-size' : '42px',
-                'color' : 'aqua'
-        })
-        }, function (){
-            $(this).css({
-            'font-size' : '16px',
-            'color' : 'black'
-        })
-        }
-        );
-
-        let listStyles = {
-            'color' : 'orange',
-            'background-color' : 'black',
-            'list-style-type' : 'none',
-        }
-
-        $('#btn1').click( function () {
-            $('li').addClass('cool')
-            $('.cool').css(listStyles)
-            $('.cool').toggleClass('big')
-        })
-
-        $('#btn2').click( function (){
-            $('dd').toggleClass('invisible')
-        })
+                    'color' : 'green',
+                    'font-size' : '20px',
+                })
+            }
+        });
+        $('li').first().css({
+            'border' : '1px solid black',
+            'font-size' : '24px',
+            'color' : 'blue',
+        });
+        $('li').last().css()
 
     </script>
 </body>
