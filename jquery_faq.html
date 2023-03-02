@@ -63,14 +63,54 @@
         <dd>Yes you can hike at most of the parks.</dd>
     </dl> -->
 
-    <ul>
+    <!-- <ul>
         <li>Linux</li>
         <li>Apache</li>
         <li>MySQL</li>
         <li>PHP</li>
         <li>Javascript</li>
-    </ul>
-    
+    </ul> -->
+    <!-- <h3>National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+    <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul> -->
+
+        <button id="btn3">Click me to see what happens.</button>
+        <h3 id="nP1">Petrified Forest National Park</h3>
+            <ul id="nP1ul">
+               <li class="nP1">It is 221,390 acres</li> 
+               <li class="nP1">It has over 800 archeological and historic sites</li> 
+               <li class="nP1">The only national park that contains a segment of route 66</li> 
+               <li class="nP1">Was designated a National Park on December 9, 1962</li> 
+            </ul>
+        <h3 id="nP2">Death Valley National Park</h3>
+            <ul id="nP2ul">
+                <li class="nP2">It is the lowest point in North America</li>
+                <li class="nP2">Some of the rock move on their own</li>
+                <li class="nP2">It is labeled the hottest place on earth</li>
+                <li class="nP2">Upon some dunes the sand will make a sound that resembles music</li>
+            </ul>
+        <h3 id="nP3">Grand Canyon National Park</h3>
+            <ul id="nP3ul">
+                <li class="nP3">It is bigger than the state of Rhode Island</li>
+                <li class="nP3">It is the most visited National Park in the United States</li>
+                <li class="nP3">The most dangerous animal is the rock squirrel</li>
+                <li class="nP3">You can get an aerial view without leaving the ground</li>
+            </ul>
+
+
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" language="javascript">
@@ -115,21 +155,72 @@
         //     $('dd').toggleClass('invisible')
         // })
 
-        $('li').each( function (index){
-            if(index % 2 !== 0){
-                $(this).css({
-                    'color' : 'green',
-                    'font-size' : '20px',
-                })
-            }
-        });
-        $('li').first().css({
-            'border' : '1px solid black',
-            'font-size' : '24px',
-            'color' : 'blue',
-        });
-        $('li').last().css()
+        // $('li').each( function (index){
+        //     if(index % 2 !== 0){
+        //         $(this).css({
+        //             'color' : 'green',
+        //             'font-size' : '20px',
+        //         })
+        //     }
+        // });
+        // $('li').first().css({
+        //     'border' : '1px solid black',
+        //     'font-size' : '24px',
+        //     'color' : 'blue',
+        // });
+        // $('li').last().css({
+        //     'color' : 'violet',
+        //     'font-size' : '28px'
+        // })
 
+        // $('#national-parks').children().css({
+        //     'color' : 'teal'
+        // })
+        // $('li').parent().css({
+        //     'list-style-type' : 'none',
+        //     'font-size' : '14px',
+        //     'color' : 'purple',
+        // })
+
+        // $('h3').click( function() {
+        //     $(this).next().css({
+        //         'font-size' : '44px',
+        //         'color' : 'salmon',
+        //     })
+        // });
+
+        $('#btn3').click( function (){
+            $('ul').children().css({
+            'background-color' : 'yellow'
+            })
+        });
+
+        $('#nP1').click( function (){
+            $('#nP1ul').children().css({
+                'font-weight' : 'bold',
+
+            })
+        })
+        $('#nP2').click( function (){
+            $('#nP2ul').children().css({
+                'font-weight' : 'bold',
+            })
+        })
+        $('#nP3').click( function (){
+            $('#nP3ul').children().css({
+                'font-weight' : 'bold',
+            })
+        })
+
+        $('.nP1').click( function (){
+            $(this).parent().children().first().css('color', 'blue')
+        })
+        $('.nP2').click( function (){
+            $(this).parent().children().first().css('color', 'blue')
+        })
+        $('.nP3').click( function (){
+            $(this).parent().children().first().css('color', 'blue')
+        })
     </script>
 </body>
 </html>
