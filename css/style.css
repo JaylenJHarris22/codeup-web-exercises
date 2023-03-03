@@ -1,0 +1,47 @@
+.fancyHeader{
+    color: #f00;
+    text-align: center;
+}
+h1 h2{
+    color: #808080;
+    text-decoration: underline;
+}
+body{
+    background-image: url('../Photos/nphrgz8yfnjylrwfr0yl.webp');
+    color: #fff;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: square;
+}
+td{
+    padding: 5px;
+    border: 2px solid #fff;
+}
+img{
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+}
+a:link{
+    color: #fff;
+    text-decoration: none;
+}
+a:visited{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    color: lightgrey;
+    font-size: 1.15em;
+}
+h2{
+    color: pink;
+}
+.table{
+    margin: 0 auto;
+}
+#tHeader{
+    text-align: center;
+}
