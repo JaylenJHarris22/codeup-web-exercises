@@ -1,0 +1,32 @@
+*{
+    /*color: white;*/
+    font-family: 'DotGothic16', sans-serif;
+}
+h1{
+    color: purple;
+    text-align: center;
+}
+.fancy-Header, h2{
+    color: magenta;
+    text-decoration: underline;
+}
+body{
+    background-color: blue;
+    background-image: url("../Photos/nphrgz8yfnjylrwfr0yl.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+table, th, td {
+    padding: 15px;
+    font-size: 2em;
+}
+a:visited{
+    color: orange;
+}
+
