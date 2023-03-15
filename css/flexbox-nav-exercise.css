@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
-nav{
+/* nav{
     background-color: #808080;
     display: flex;
     justify-content: space-between;
@@ -27,4 +27,8 @@ p{
     margin: 0 auto;
     font-size: 3em;
     padding: .2em 0;
+} */
+nav{
+    display: flex;
+    justify-content: space-between;
 }

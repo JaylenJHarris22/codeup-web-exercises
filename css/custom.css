@@ -40,3 +40,16 @@ ul{
     text-align: center;
     padding: .5em;
 }
+.btn-sm{
+    float: right;
+}
+.list-group{
+    gap: 0;
+}
+.list-group-item{
+    width: 100%;
+    font-weight: 600;
+}
+.inner-card1{
+    margin-bottom: 1em;
+}
