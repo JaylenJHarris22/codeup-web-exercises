@@ -26,8 +26,9 @@
         let btn = document.getElementById("btn");
         btn.addEventListener( "click", () => {
             let p = document.createElement("p").innerHTML;
-            p = document.forms.login.username.value;
-            document.body.appendChild(p);
+            let username = document.forms.login.username.value;
+            p = username;
+            document.body.append(p);
         })
     </script>
 </body>

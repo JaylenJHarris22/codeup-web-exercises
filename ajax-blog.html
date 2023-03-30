@@ -8,6 +8,10 @@
 </head>
 <body>
 
+    <div id="post">
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" language="javascript">
         // $.get('https://pokeapi.co/api/v2/pokemon/lucario').done(function(data) {
@@ -19,7 +23,18 @@
         //     console.log("Data returned from server:");
         //     console.log(data);
         // });
+            $.get("data/blog.json").done( function(data){
+                let html = '';
 
+                $.each(data, function(key, value){
+                    html += "<div>";
+                    html += "<h3>" + value.title + "</h3>"
+                    html += "<p>" + value.content + "</p>"
+                    
+                })
+
+                $("#post").html(html)
+            })
 
     </script>
 
