@@ -5,10 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- this the cdn -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
+    <div id='map' style='width: 100%; height: 700px;'></div>
+
+
+    <script src="/js/keys.js"></script>
+    <script>
+    // TO MAKE THE MAP APPEAR YOU MUST
+    // ADD YOUR ACCESS TOKEN FROM
+    // https://account.mapbox.com
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-96.796, 32.776], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+    });
+
+    //This creates a marker for the map
+    const marker1 = new mapboxgl.Marker()
+    //sets the location for the marker
+    .setLngLat([-96.795, 32.775])
+    //attaches the marker to the map
+    .addTo(map);
+
+    const popup = new mapboxgl.Popup()
+    .setLngLat([-96.763, 32.774])
+    .setHTML("<p> Cool map stuff!!</p>")
     
+
+    marker1.setPopup(popup)
+
+    
+    </script>
 </body>
 </html>
