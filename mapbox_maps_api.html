@@ -14,6 +14,7 @@
 
 
     <script src="/js/keys.js"></script>
+    <script src="/js/mapbox-geocoder-utils.js"></script>
     <script>
     // TO MAKE THE MAP APPEAR YOU MUST
     // ADD YOUR ACCESS TOKEN FROM
@@ -23,24 +24,62 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-96.796, 32.776], // starting position [lng, lat]
-        zoom: 12, // starting zoom
+        zoom: 10, // starting zoom
     });
 
-    //This creates a marker for the map
-    const marker1 = new mapboxgl.Marker()
-    //sets the location for the marker
-    .setLngLat([-96.795, 32.775])
-    //attaches the marker to the map
-    .addTo(map);
+    // let restaurant = geocode("2501 N Tryon St, Charlotte, NC 28206", MAPBOX_TOKEN);
+    
+    let restaurants = [
+        {address: "321 W Hickory St Ste 100, Denton, TX 76201", name: "Gangnam Chicken", description: "The best chicken spot in Denton served both american themed chicken and korean themed chicken."},
+        {address: "201 Dallas Dr, Denton, TX 76205", name: "Tortilleria La Sabrocita", description: "Best tacos in Denton hands down."},
+        {address: "2215 S Loop 288, Denton, TX 76205", name: "Chiloso", description: "An authentic mexican chain that serves some of the most delicious mexican food."}
+    ]
+    
+    restaurants[1].then(function (result) {
+        map.setCenter([result[0], result[1]])
+        map.setZoom(10)
+    })
 
-    const popup = new mapboxgl.Popup()
-    .setLngLat([-96.763, 32.774])
-    .setHTML("<p> Cool map stuff!!</p>")
+    restaurants.forEach( function(restaurant) {
+        const location = geocode(restaurant.address, MAPBOX_TOKEN);
+        location.then(function (result) {
+            const marker = new mapboxgl.Marker()
+            .setLngLat([result[0], result[1]])
+            .addTo(map)
+
+            const popup = new mapboxgl.Popup()
+            .setHTML("<h3>" + restaurant.name + "</h3><br><p>" + restaurant.description + "</p>")
+
+            marker.setPopup(popup)
+        })
+    })
+
+    // //This creates a marker for the map
+    // const marker1 = new mapboxgl.Marker()
+    // //sets the location for the marker
+    // .setLngLat([-96.795, 32.775])
+    // //attaches the marker to the map
+    // .addTo(map);
+
+    // const popup = new mapboxgl.Popup()
+    // .setLngLat([-96.763, 32.774])
+    // .setHTML("<p> Cool map stuff!!</p>")
     
 
-    marker1.setPopup(popup)
+    // marker1.setPopup(popup)
 
+    // let newLocation = geocode("Anchorage", MAPBOX_TOKEN);
     
+    // newLocation.then(function (result) {
+    //     console.log(result);
+    //     map.setCenter([result[0], result[1]])
+    // })
+
+    // let reverseLocation = reverseGeocode({lng: 149.474, lat: 45.69}, MAPBOX_TOKEN)
+    // console.log(reverseLocation);
+    // reverseLocation.then(function (result) {
+    //     map.setCenter([149.474, 45.69])
+    // })
     </script>
 </body>
 </html>
